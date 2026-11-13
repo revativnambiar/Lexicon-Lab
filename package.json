@@ -1,0 +1,21 @@
+{
+  "name": "lexicon-lab",
+  "version": "1.0.0",
+  "description": "LEXICON LAB - The Interactive English Learning & Communication Platform. Learn. Explore. Express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "english-learning",
+    "edtech",
+    "grammar",
+    "vocabulary",
+    "reading-comprehension",
+    "writing-studio",
+    "speech-preparation"
+  ],
+  "author": "Google DeepMind Team for Josh",
+  "license": "MIT"
+}
+

@@ -1,0 +1,425 @@
+/**
+ * LEXICON LAB - Writing Studio Styles
+ * Aligned with Course Outcome CO1: English grammar and sentence formation
+ */
+
+.writing-page-header {
+  padding: 3rem 0 2rem;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Category Pills Nav */
+.writing-categories-nav {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.writing-cat-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: var(--color-text-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.writing-cat-tab:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-accent-subtle);
+}
+
+.writing-cat-tab.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+/* Studio Layout: Main Editor (70%) + Assistant/Drafts Sidebar (30%) */
+.writing-studio-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  align-items: start;
+}
+
+/* Main Editor Card */
+.writing-editor-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.writing-prompt-selector-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.prompt-select-box {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.writing-select {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--border-radius-md);
+  outline: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.writing-custom-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--border-radius-md);
+  outline: none;
+  margin-top: 0.5rem;
+}
+
+.writing-prompt-desc-box {
+  background-color: var(--color-accent-subtle);
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+}
+
+.writing-title-field {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 2px solid #E2E8F0;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  outline: none;
+  font-family: var(--font-sans);
+}
+.writing-title-field:focus {
+  border-bottom-color: var(--color-interactive);
+}
+
+/* Toolbar */
+.writing-editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.toolbar-group-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toolbar-group-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Big Comfortable Text Area */
+.writing-editor-textarea {
+  width: 100%;
+  min-height: 380px;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  border: none;
+  outline: none;
+  resize: vertical;
+}
+
+/* Live Counters Bar */
+.editor-counters-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.counter-items-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.counter-item strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Sidebar: Writing Assistant & Saved Drafts */
+.writing-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.writing-feedback-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.sidebar-card-header h4 {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+
+.feedback-empty-state {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+.feedback-empty-state svg {
+  margin-bottom: 0.5rem;
+}
+
+.feedback-summary-bar {
+  margin-bottom: 1rem;
+}
+
+.feedback-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.readability-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.style-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #F0F4F8;
+}
+
+.chip-metric {
+  font-size: 0.75rem;
+  background-color: var(--color-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text-body);
+}
+
+.alerts-feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.alert-item {
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+}
+
+.alert-spelling {
+  background-color: var(--color-error-bg);
+  border: 1px solid #FEB2B2;
+}
+
+.alert-grammar {
+  background-color: var(--color-accent-subtle);
+  border: 1px solid #CBD5E1;
+}
+
+.alert-punctuation {
+  background-color: #FEFCBF;
+  border: 1px solid #FAF089;
+}
+
+.alert-style {
+  background-color: var(--color-bg);
+  border: 1px solid #E2E8F0;
+}
+
+.alert-badge-type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.alert-content p {
+  margin-bottom: 0.35rem;
+}
+
+.btn-apply-fix {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clean-writing-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background-color: var(--color-success-bg);
+  border: 1px solid #9AE6B4;
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #22543D;
+}
+
+/* Category Tips Box */
+.writing-tips-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.writing-tips-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.writing-tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-body);
+}
+
+.writing-tip-item svg {
+  color: var(--color-interactive);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Saved Drafts List */
+.writing-drafts-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.saved-drafts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.saved-draft-card {
+  background-color: var(--color-bg);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-md);
+  padding: 0.85rem;
+  transition: all var(--transition-fast);
+}
+
+.saved-draft-card.active {
+  border-color: var(--color-interactive);
+  background-color: var(--color-accent-subtle);
+}
+
+.draft-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.draft-card-date {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.draft-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.35rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.draft-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.draft-actions-row {
+  display: flex;
+  gap: 0.35rem;
+}
+
+@media (max-width: 992px) {
+  .writing-studio-layout {
+    grid-template-columns: 1fr;
+  }
+}
+

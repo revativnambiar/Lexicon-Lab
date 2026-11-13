@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEXICON LAB | Learn. Explore. Express. - Interactive English Learning Platform</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar-footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/grammar.css">
+  <link rel="stylesheet" href="css/vocabulary.css">
+  <link rel="stylesheet" href="css/reading.css">
+  <link rel="stylesheet" href="css/writing.css">
+  <link rel="stylesheet" href="css/speech.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#home" class="brand-logo-link" data-nav="home">
+        <div class="brand-emblem">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <line x1="9" y1="7" x2="15" y2="7"></line>
+            <line x1="9" y1="11" x2="13" y2="11"></line>
+          </svg>
+        </div>
+        <div class="brand-text-col">
+          <span class="brand-title">LEXICON LAB</span>
+          <span class="brand-tagline">Learn. Explore. Express.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active" data-nav="home">Home</a>
+        <a href="#grammar" class="nav-link" data-nav="grammar">Grammar</a>
+        <a href="#vocabulary" class="nav-link" data-nav="vocabulary">Vocabulary</a>
+        <a href="#reading" class="nav-link" data-nav="reading">Reading</a>
+        <a href="#writing" class="nav-link" data-nav="writing">Writing</a>
+        <a href="#speech" class="nav-link" data-nav="speech">Speech Corner</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <a href="#dashboard" class="nav-progress-pill" data-nav="dashboard" title="View Student Learning Dashboard">
+          <span class="pulse-indicator"></span>
+          <span id="nav-progress-badge">0% Complete</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open mobile menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <div class="brand-text-col">
+        <span class="brand-title">LEXICON LAB</span>
+        <span class="brand-tagline">Learn. Explore. Express.</span>
+      </div>
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close mobile menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="nav-link" data-nav="home">Home</a></li>
+      <li><a href="#grammar" class="nav-link" data-nav="grammar">Grammar Studio</a></li>
+      <li><a href="#vocabulary" class="nav-link" data-nav="vocabulary">Word Explorer</a></li>
+      <li><a href="#reading" class="nav-link" data-nav="reading">Reading Hub</a></li>
+      <li><a href="#writing" class="nav-link" data-nav="writing">Writing Studio</a></li>
+      <li><a href="#speech" class="nav-link" data-nav="speech">Speech Corner</a></li>
+      <li><a href="#dashboard" class="nav-link" data-nav="dashboard">Student Dashboard</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid #E2E8F0;">
+      <button class="btn btn-primary" style="width: 100%;" data-nav="dashboard">Open Dashboard</button>
+    </div>
+  </div>
+
+  <!-- MAIN VIEWS CONTAINER -->
+  <main id="app-main-content">
+
+    <!-- ========================================== -->
+    <!-- VIEW A: HOME PAGE                          -->
+    <!-- ========================================== -->
+    <section id="view-home" class="view-section active-view">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge-row">
+              <span class="badge badge-accent">Interactive English Platform</span>
+            </div>
+            <h1 class="hero-title">Unlock the Power of <span class="text-gradient">English.</span></h1>
+            <p class="hero-lead">
+              LEXICON LAB is an interactive English learning and communication platform designed to help students master grammar, expand vocabulary, refine critical reading, craft impactful writing, and deliver speeches with confidence.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#grammar" class="btn btn-primary" data-nav="grammar">
+                Start Learning
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#speech" class="btn btn-outline" data-nav="speech">
+                Try Speech Corner
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Educational Illustration / Visual -->
+          <div class="hero-visual-card">
+            <svg class="hero-svg-interactive" viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="480" height="340" rx="16" fill="#F7F9FC"/>
+              <!-- Grid background lines -->
+              <line x1="40" y1="80" x2="440" y2="80" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="40" y1="160" x2="440" y2="160" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="40" y1="240" x2="440" y2="240" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="4 4"/>
+              
+              <!-- Central Educational Tablet / Canvas -->
+              <rect x="60" y="45" width="360" height="250" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" filter="drop-shadow(0 10px 20px rgba(16,42,67,0.06))"/>
+              
+              <!-- Header Bar of the Canvas -->
+              <rect x="60" y="45" width="360" height="42" rx="14" fill="#102A43"/>
+              <circle cx="85" cy="66" r="5" fill="#E2E8F0" opacity="0.4"/>
+              <circle cx="102" cy="66" r="5" fill="#E2E8F0" opacity="0.4"/>
+              <circle cx="119" cy="66" r="5" fill="#E2E8F0" opacity="0.4"/>
+              <rect x="150" y="58" width="180" height="16" rx="4" fill="#243B53"/>
+
+              <!-- Graphic Elements inside canvas -->
+              <!-- Book / Open Pages -->
+              <path d="M120 130 C150 120 190 120 220 135 L220 215 C190 200 150 200 120 210 Z" fill="#DCEAF7" stroke="#1E6091" stroke-width="2"/>
+              <path d="M320 130 C290 120 250 120 220 135 L220 215 C250 200 290 200 320 210 Z" fill="#FFFFFF" stroke="#1E6091" stroke-width="2"/>
+              <line x1="220" y1="135" x2="220" y2="215" stroke="#102A43" stroke-width="2.5"/>
+
+              <!-- Audio Waves / Speech Symbol -->
+              <path d="M335 150 Q345 160 335 170" stroke="#1E6091" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M345 142 Q362 160 345 178" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M355 134 Q378 160 355 186" stroke="#2B6CB0" stroke-width="2.5" stroke-linecap="round"/>
+
+              <!-- Quill / Pen Element -->
+              <path d="M165 245 L150 250 L155 235 L230 160 L240 170 Z" fill="#102A43"/>
+              <circle cx="235" cy="165" r="3" fill="#DCEAF7"/>
+              
+              <!-- Subtle badge on canvas -->
+              <rect x="100" y="240" width="150" height="24" rx="6" fill="#F0F4F8"/>
+              <text x="112" y="256" font-family="sans-serif" font-size="10" font-weight="bold" fill="#102A43">INTERACTIVE ENGLISH LAB</text>
+            </svg>
+
+            <!-- Floating Status Badges -->
+            <div class="hero-floating-stat stat-1">
+              <div class="floating-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              </div>
+              <div class="floating-text-col">
+                <span class="floating-title">Sentence Correction</span>
+                <span class="floating-sub">Real-time Syntax Engine</span>
+              </div>
+            </div>
+
+            <div class="hero-floating-stat stat-2">
+              <div class="floating-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+              <div class="floating-text-col">
+                <span class="floating-title">Any-Topic Speech Engine</span>
+                <span class="floating-sub">1 to 5 Mins • 3 Rhetorical Styles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview of the Five Learning Modules -->
+      <div class="modules-section">
+        <div class="container">
+          <div class="section-header-centered">
+            <span class="section-subtitle-tag">Practical Learning Ecosystem</span>
+            <h2 class="section-main-heading">Five Specialized Studios for Practical Fluency</h2>
+            <p class="section-lead-text">Move beyond passive textbook memorization. Engage with active correction, live writing heuristics, structured summarization rubrics, and dynamic speech preparation.</p>
+          </div>
+
+          <div class="modules-grid">
+            <!-- Module 1: Grammar Studio -->
+            <div class="module-card">
+              <div class="module-card-accent-bar"></div>
+              <div class="module-card-top">
+                <div class="module-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <span class="badge badge-navy">Grammar Core</span>
+              </div>
+              <h3 class="module-title">Grammar Studio</h3>
+              <p class="module-desc">Master English tense architecture, parts of speech, articles, prepositions, subject-verb agreement, and active/passive voice through interactive lessons.</p>
+              <ul class="module-features-list">
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 7 comprehensive grammar lesson chapters</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Interactive sentence correction engine</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Instant answer feedback with rule explanations</li>
+              </ul>
+              <div class="module-card-action">
+                <a href="#grammar" class="btn btn-outline" data-nav="grammar" style="width: 100%;">Enter Grammar Studio →</a>
+              </div>
+            </div>
+
+            <!-- Module 2: Word Explorer -->
+            <div class="module-card">
+              <div class="module-card-accent-bar"></div>
+              <div class="module-card-top">
+                <div class="module-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <span class="badge badge-navy">Vocabulary</span>
+              </div>
+              <h3 class="module-title">Word Explorer</h3>
+              <p class="module-desc">Expand vocabulary through curated words, phonetics, audio pronunciation, synonyms, antonyms, idiomatic phrases, and interactive quizzes.</p>
+              <ul class="module-features-list">
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dynamic Word of the Day showcase</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Live dictionary search across 3 difficulty tiers</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Idioms & phrases with historical etymology</li>
+              </ul>
+              <div class="module-card-action">
+                <a href="#vocabulary" class="btn btn-outline" data-nav="vocabulary" style="width: 100%;">Explore Vocabulary →</a>
+              </div>
+            </div>
+
+            <!-- Module 3: Reading Hub -->
+            <div class="module-card">
+              <div class="module-card-accent-bar"></div>
+              <div class="module-card-top">
+                <div class="module-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </div>
+                <span class="badge badge-navy">Comprehension</span>
+              </div>
+              <h3 class="module-title">Reading Hub</h3>
+              <p class="module-desc">Develop critical reading comprehension and summarization skills through meaningful original texts across science, technology, environment, and society.</p>
+              <ul class="module-features-list">
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 5 curated multi-paragraph original passages</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Summary Writing activity & rubric</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Side-by-side comparison with Model Summaries</li>
+              </ul>
+              <div class="module-card-action">
+                <a href="#reading" class="btn btn-outline" data-nav="reading" style="width: 100%;">Open Reading Hub →</a>
+              </div>
+            </div>
+
+            <!-- Module 4: Writing Studio -->
+            <div class="module-card">
+              <div class="module-card-accent-bar"></div>
+              <div class="module-card-top">
+                <div class="module-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                </div>
+                <span class="badge badge-navy">Composition</span>
+              </div>
+              <h3 class="module-title">Writing Studio</h3>
+              <p class="module-desc">Craft structured essays, paragraphs, formal letters, reports, and creative narratives with live spelling, grammar pattern alerts, and readability feedback.</p>
+              <ul class="module-features-list">
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 5 composition categories with prompt selector</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Live word, character, and Flesch readability counters</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Save, export TXT, and manage writing drafts</li>
+              </ul>
+              <div class="module-card-action">
+                <a href="#writing" class="btn btn-outline" data-nav="writing" style="width: 100%;">Enter Writing Studio →</a>
+              </div>
+            </div>
+
+            <!-- Module 5: Speech Corner -->
+            <div class="module-card" style="grid-column: span 2;">
+              <div class="module-card-accent-bar"></div>
+              <div class="module-card-top">
+                <div class="module-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </div>
+                <span class="badge badge-navy">Public Speaking</span>
+              </div>
+              <h3 class="module-title">Speech Corner</h3>
+              <p class="module-desc">Type ANY topic—from Artificial Intelligence to Climate Action—and synthesize a full structured speech with Introduction, Main Body, Conclusion, delivery pause cues, audio speech rehearsal, and delivery guidance.</p>
+              <ul class="module-features-list">
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Customizable duration: 1 min (~130w), 2 min (~260w), 3 min (~400w), 5 min (~650w)</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 3 rhetoric styles: Informative, Persuasive, Motivational across 3 language tiers</li>
+                <li class="module-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Web Speech audio playback rehearsal with pacing controls and speech delivery guide</li>
+              </ul>
+              <div class="module-card-action">
+                <a href="#speech" class="btn btn-primary" data-nav="speech">Launch Speech Corner →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose Lexicon Lab Section -->
+      <div class="why-section">
+        <div class="container">
+          <div class="section-header-centered">
+            <span class="section-subtitle-tag">Pedagogical Distinction</span>
+            <h2 class="section-main-heading">Why Choose Lexicon Lab?</h2>
+            <p class="section-lead-text">Engineered around modern communicative language teaching methodologies, prioritizing active production and authentic feedback.</p>
+          </div>
+
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </div>
+              <h4>Active Practice Over Passive Notes</h4>
+              <p>Students learn grammar not through static lectures, but by actively identifying syntactic flaws, correcting sentences, and receiving clear grammatical rule explanations.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              </div>
+              <h4>Real Heuristic Writing Feedback</h4>
+              <p>No fake detection. The Writing Studio uses authentic rule-based algorithms to detect common misspellings, subject-verb disagreements, punctuation flaws, and readability grade levels.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h4>Synthesize Any Custom Speech Topic</h4>
+              <p>Type any topic under the sun. The rhetorical engine organizes arguments into an engaging hook, structured thesis, supporting evidence, pause cues, and a memorable call to action.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h4>Dedicated Summary Writing Rubric</h4>
+              <p>Refine your summarization skills by comparing your concise summary against key thematic criteria and model reference summaries side-by-side.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h4>Zero Fabricated Statistics</h4>
+              <p>Every progress bar and dashboard metric directly calculates from your real completed quizzes, corrections, words written, and speeches prepared.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <h4>Privacy-First Local Storage</h4>
+              <p>All student activity, saved drafts, and speech records persist locally in your browser with instant zero-latency loading and complete offline support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlights / Real Platform Statistics -->
+      <div class="stats-section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-metric-card">
+              <div class="stat-number">7</div>
+              <div class="stat-title">Grammar Modules</div>
+              <div class="stat-desc">Covering tenses, prepositions, voice & sentence structures</div>
+            </div>
+            <div class="stat-metric-card">
+              <div class="stat-number">15</div>
+              <div class="stat-title">Correction Challenges</div>
+              <div class="stat-desc">Real student sentence flaw challenges with side-by-side solutions</div>
+            </div>
+            <div class="stat-metric-card">
+              <div class="stat-number">5</div>
+              <div class="stat-title">Deep Reading Passages</div>
+              <div class="stat-desc">Full original texts across science, technology, environment & society</div>
+            </div>
+            <div class="stat-metric-card">
+              <div class="stat-number">∞</div>
+              <div class="stat-title">Any-Topic Speeches</div>
+              <div class="stat-desc">Custom synthesis tailored to duration, language tier, and rhetorical style</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW B: GRAMMAR STUDIO                     -->
+    <!-- ========================================== -->
+    <section id="view-grammar" class="view-section hidden-view">
+      <div class="grammar-page-header">
+        <div class="container grammar-header-row">
+          <div class="grammar-header-text">
+            <div class="badge-row" style="margin-bottom: 0.5rem;">
+              <span class="badge badge-accent">Interactive Grammar Laboratory</span>
+            </div>
+            <h1>Grammar Studio</h1>
+            <p>Master English syntactic principles, understand tense formulations, resolve common preposition errors, and practice active sentence correction.</p>
+          </div>
+          <button class="btn btn-outline" onclick="document.getElementById('sentence-correction-anchor').scrollIntoView({ behavior: 'smooth' })">
+            Jump to Sentence Correction ↓
+          </button>
+        </div>
+      </div>
+
+      <div class="container grammar-studio-layout" id="grammar-studio-section">
+        <!-- Sidebar Navigation -->
+        <aside class="grammar-sidebar">
+          <h4 class="sidebar-title">Grammar Core Lessons</h4>
+          <div class="grammar-topics-nav" id="grammar-topics-list">
+            <!-- Populated dynamically by grammar.js -->
+          </div>
+        </aside>
+
+        <!-- Main Lesson & Quiz Display -->
+        <main class="grammar-lesson-main" id="grammar-lesson-view">
+          <!-- Populated dynamically by grammar.js -->
+        </main>
+      </div>
+
+      <!-- Interactive Sentence Correction Studio -->
+      <div class="container sentence-correction-section" id="sentence-correction-anchor">
+        <div class="sc-container">
+          <div class="sc-header-row">
+            <div>
+              <span class="badge badge-navy" style="margin-bottom: 0.35rem;">Interactive Challenge</span>
+              <h2 style="font-size: 1.75rem; color: var(--color-primary);">Sentence Correction Studio</h2>
+              <p class="text-muted text-sm">Analyze the flawed sentence, identify the grammatical error, and type your corrected sentence.</p>
+            </div>
+            <div class="sc-progress-wrap">
+              <span class="text-sm font-bold" id="sc-solved-count">0/15 Solved</span>
+              <div class="sc-progress-bar">
+                <div class="sc-progress-bar-fill" id="sc-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sentence Challenge Card -->
+          <div class="sc-challenge-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="badge badge-accent-sm" id="sc-index-badge">Challenge 1 of 15</span>
+              <span class="badge badge-outline-sm" id="sc-category-badge">Subject-Verb Agreement</span>
+            </div>
+            <span class="sc-card-prompt-label">Sentence with Grammatical Error:</span>
+            <div class="sc-incorrect-sentence" id="sc-sentence-text">"She go to college every morning."</div>
+          </div>
+
+          <!-- Student Correction Input Field -->
+          <div class="sc-input-group">
+            <label for="sc-student-input" class="sc-input-label">Type your corrected version here:</label>
+            <input type="text" id="sc-student-input" class="sc-text-input" placeholder="e.g., She goes to college every morning." autocomplete="off" spellcheck="true">
+          </div>
+
+          <!-- Controls Row -->
+          <div class="sc-controls-row">
+            <div class="sc-btn-group-left">
+              <button class="btn btn-primary" id="sc-check-btn">
+                Check Correction
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </button>
+              <button class="btn btn-outline-sm" id="sc-reveal-btn">Show Solution</button>
+            </div>
+            <div class="sc-btn-group-right">
+              <button class="btn btn-outline-sm" id="sc-prev-btn">← Previous</button>
+              <button class="btn btn-outline-sm" id="sc-next-btn">Next Challenge →</button>
+            </div>
+          </div>
+
+          <!-- Feedback Box -->
+          <div class="sc-feedback-container hidden" id="sc-feedback-box">
+            <!-- Filled dynamically by grammar.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW C: WORD EXPLORER                      -->
+    <!-- ========================================== -->
+    <section id="view-vocabulary" class="view-section hidden-view">
+      <div class="vocab-page-header">
+        <div class="container">
+          <div class="badge-row" style="margin-bottom: 0.5rem;">
+            <span class="badge badge-accent">Lexical Mastery</span>
+          </div>
+          <h1 style="font-size: 2.25rem;">Word Explorer</h1>
+          <p class="text-muted">Enrich your vocabulary with academic, professional, and everyday words, complete with definitions, phonetics, audio pronunciation, synonyms, and idioms.</p>
+        </div>
+      </div>
+
+      <!-- Word of the Day Showcase -->
+      <div class="container wod-section">
+        <div class="wod-card">
+          <div class="wod-top-row">
+            <div class="wod-label-group">
+              <span class="badge badge-accent">Word of the Day</span>
+              <span class="badge badge-outline-sm" id="wod-pos-badge">adjective</span>
+              <span class="badge badge-outline-sm" id="wod-level-badge">Intermediate</span>
+            </div>
+            <div class="wod-actions-group">
+              <button class="btn btn-outline-sm" id="wod-shuffle-btn" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+                Random Word
+              </button>
+              <button class="btn btn-outline-sm" id="wod-master-btn">
+                Mark Mastered
+              </button>
+            </div>
+          </div>
+
+          <div class="wod-main-row">
+            <h2 class="wod-word-heading" id="wod-word-heading">Eloquent</h2>
+            <span class="wod-phonetic" id="wod-phonetic">/ˈel.ə.kwənt/</span>
+            <button class="wod-audio-btn" id="wod-audio-btn" title="Pronounce Word Aloud">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            </button>
+          </div>
+
+          <p class="wod-definition" id="wod-definition">Fluent, forceful, and persuasive in speaking or writing; vividly expressive.</p>
+
+          <div class="wod-details-grid">
+            <div class="wod-detail-col">
+              <h5>Synonyms</h5>
+              <div class="tags-row" id="wod-synonyms-container">
+                <!-- Filled dynamically -->
+              </div>
+            </div>
+            <div class="wod-detail-col">
+              <h5>Antonyms</h5>
+              <div class="tags-row" id="wod-antonyms-container">
+                <!-- Filled dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <div class="wod-example-box" id="wod-example-text">
+            "She delivered an eloquent speech that moved the entire audience to tears."
+          </div>
+
+          <div class="wod-footer-notes">
+            <span><strong>Etymology:</strong> <span id="wod-etymology-text">From Latin 'eloqui' meaning 'to speak out'.</span></span>
+            <span><strong>Tip:</strong> <span id="wod-usage-tip">Use for people, glances, or written arguments.</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dictionary & Search Section -->
+      <div class="container vocab-search-section">
+        <div class="vocab-controls-card">
+          <div class="search-input-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="vocab-search-input" class="search-text-input" placeholder="Search words, meanings, or synonyms..." autocomplete="off">
+          </div>
+          <div class="vocab-filter-group">
+            <select id="vocab-level-filter" class="filter-select">
+              <option value="All">All Difficulty Tiers</option>
+              <option value="Foundational">Foundational</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+          <span class="text-sm text-muted font-bold" id="vocab-result-count">Loading vocabulary database...</span>
+        </div>
+
+        <!-- Words Grid -->
+        <div class="vocab-words-grid" id="vocab-words-grid">
+          <!-- Filled dynamically by vocabulary.js -->
+        </div>
+      </div>
+
+      <!-- Idioms & Phrases Explorer -->
+      <div class="container idioms-section">
+        <div class="section-header-centered">
+          <span class="section-subtitle-tag">Figurative Mastery</span>
+          <h2 class="section-main-heading">Idioms & English Phrases</h2>
+          <p class="section-lead-text">Discover common English idioms, their historical origins, and how to use them naturally in conversations and writing.</p>
+        </div>
+        <div class="idioms-grid" id="vocab-idioms-grid">
+          <!-- Filled dynamically by vocabulary.js -->
+        </div>
+      </div>
+
+      <!-- Interactive Vocabulary Quiz -->
+      <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div class="section-header-centered">
+          <span class="section-subtitle-tag">Active Retention</span>
+          <h2 class="section-main-heading">Vocabulary Skills Assessment</h2>
+          <p class="section-lead-text">Test your mastery of word definitions, context, synonyms, and idioms.</p>
+        </div>
+        <div id="vocab-quiz-container" style="max-width: 760px; margin: 0 auto;">
+          <!-- Filled dynamically by vocabulary.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW D: READING HUB (CO4)                  -->
+    <!-- ========================================== -->
+    <section id="view-reading" class="view-section hidden-view">
+      <div class="reading-page-header">
+        <div class="container">
+          <div class="badge-row" style="margin-bottom: 0.5rem;">
+            <span class="badge badge-navy">Course Outcome CO4</span>
+            <span class="badge badge-accent">Summarizing Information</span>
+          </div>
+          <h1 style="font-size: 2.25rem;">Reading Hub</h1>
+          <p class="text-muted">Immerse yourself in original passages across science, tech, ecology, and society. Read deeply, answer comprehension questions, and write structured summaries.</p>
+          
+          <!-- Category Filters -->
+          <nav class="reading-category-nav" id="reading-category-filters">
+            <!-- Filter buttons populated by reading.js -->
+          </nav>
+        </div>
+      </div>
+
+      <!-- Passages Grid -->
+      <div class="container reading-passages-section">
+        <div class="reading-passages-grid" id="reading-passages-list">
+          <!-- Populated by reading.js -->
+        </div>
+      </div>
+
+      <!-- Active Passage Reader Room -->
+      <div class="container" id="active-passage-reader-section" style="padding-bottom: 4rem;">
+        <div class="passage-reader-container">
+          <!-- Reader Toolbar -->
+          <div class="reader-toolbar">
+            <div class="passage-meta-row" id="active-passage-meta">
+              <!-- Meta badges -->
+            </div>
+            <div class="reader-font-controls">
+              <span class="font-control-label">Reading Size:</span>
+              <button class="reading-font-btn" data-font-size="small">A-</button>
+              <button class="reading-font-btn active" data-font-size="medium">A</button>
+              <button class="reading-font-btn" data-font-size="large">A+</button>
+            </div>
+          </div>
+
+          <!-- Passage Header -->
+          <div class="passage-header-block">
+            <h2 class="passage-title" id="active-passage-title">The AI Frontier: Balancing Algorithmic Power and Human Agency</h2>
+          </div>
+
+          <!-- Passage Content -->
+          <article class="passage-reader-body font-medium" id="active-passage-content">
+            <!-- Full reading paragraphs populated by reading.js -->
+          </article>
+
+          <!-- Section 1: Comprehension Questions -->
+          <div class="comprehension-section">
+            <div class="comprehension-heading-row">
+              <span class="badge badge-navy">Step 1: Comprehension Check</span>
+              <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-top: 0.35rem;">Passage Comprehension Questions</h3>
+            </div>
+            <div class="comp-questions-list" id="comprehension-quiz-container">
+              <!-- Populated by reading.js -->
+            </div>
+          </div>
+
+          <!-- Section 2: Dedicated Summary Writing Activity (CO4) -->
+          <div class="summary-writing-panel">
+            <div class="summary-panel-header">
+              <span class="badge badge-primary">Step 2: Summary Writing Activity (CO4 Outcome)</span>
+              <h3 style="font-size: 1.75rem; color: var(--color-primary); margin-top: 0.35rem;">Write Your Summary</h3>
+              <p class="text-muted text-sm">Synthesize the passage above into a concise, focused summary in your own words.</p>
+            </div>
+
+            <div class="summary-guidelines-box">
+              <h5>Summary Writing Guidelines:</h5>
+              <ul class="summary-guidelines-list">
+                <li>Identify the author's primary thesis and major supporting pillars.</li>
+                <li>Omit trivial anecdotes, redundant examples, and minor statistical figures.</li>
+                <li>Write with your own original phrasing rather than copying sentences verbatim.</li>
+                <li>Aim for the recommended length: <strong id="summary-target-range">Target: 50 to 80 words</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- Summary Textarea -->
+            <div class="summary-editor-wrapper">
+              <textarea id="summary-textarea" class="summary-textarea" placeholder="Type your concise summary of the passage here..."></textarea>
+            </div>
+
+            <!-- Summary Editor Footer -->
+            <div class="summary-editor-footer">
+              <span class="word-count-badge" id="summary-word-count-badge">0 words (Target: 50-80)</span>
+              <div class="summary-btn-group">
+                <button class="btn btn-outline-sm" id="clear-summary-btn">Clear</button>
+                <button class="btn btn-primary" id="submit-summary-btn">
+                  Submit Summary for Evaluation
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Summary Evaluation Results Panel (Side-by-side comparison & rubric) -->
+            <div class="summary-feedback-panel hidden" id="summary-evaluation-result">
+              <!-- Populated dynamically upon submission -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW E: WRITING STUDIO (CO1)               -->
+    <!-- ========================================== -->
+    <section id="view-writing" class="view-section hidden-view">
+      <div class="writing-page-header">
+        <div class="container">
+          <div class="badge-row" style="margin-bottom: 0.5rem;">
+            <span class="badge badge-navy">Course Outcome CO1</span>
+            <span class="badge badge-accent">Composition & Sentence Formation</span>
+          </div>
+          <h1 style="font-size: 2.25rem;">Writing Studio</h1>
+          <p class="text-muted">Develop your written English across essays, paragraphs, formal letters, reports, and creative writing with real-time heuristic grammar and readability feedback.</p>
+
+          <!-- Category Selector Tabs -->
+          <div class="writing-categories-nav">
+            <button class="writing-cat-tab active" data-cat-id="essay">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              Essay Writing
+            </button>
+            <button class="writing-cat-tab" data-cat-id="paragraph">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="17" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg>
+              Paragraph Writing
+            </button>
+            <button class="writing-cat-tab" data-cat-id="letter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Letter Writing
+            </button>
+            <button class="writing-cat-tab" data-cat-id="report">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              Report Writing
+            </button>
+            <button class="writing-cat-tab" data-cat-id="creative">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              Creative Writing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Studio Layout -->
+      <div class="container writing-studio-layout">
+        <!-- Main Writing Editor -->
+        <div class="writing-editor-card">
+          <!-- Prompt Selector Row -->
+          <div class="writing-prompt-selector-row">
+            <div class="prompt-select-box">
+              <select id="writing-prompt-select" class="writing-select">
+                <!-- Filled dynamically -->
+              </select>
+            </div>
+            <div class="hidden" id="custom-prompt-wrap">
+              <input type="text" id="writing-custom-prompt-input" class="writing-custom-input" placeholder="Type your own custom topic or prompt here...">
+            </div>
+            <div class="writing-prompt-desc-box" id="writing-prompt-desc">
+              <!-- Prompt description -->
+            </div>
+          </div>
+
+          <!-- Title Input -->
+          <input type="text" id="writing-title-input" class="writing-title-field" placeholder="Enter Composition Title..." autocomplete="off">
+
+          <!-- Editor Toolbar -->
+          <div class="writing-editor-toolbar">
+            <div class="toolbar-group-left">
+              <button class="btn btn-outline-xs" id="writing-insert-template-btn" title="Insert structural outline skeleton">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+                Insert Format Template
+              </button>
+              <button class="btn btn-outline-xs" id="writing-clear-btn" title="Clear text editor">Clear</button>
+            </div>
+            <div class="toolbar-group-right">
+              <button class="btn btn-outline-xs" id="writing-copy-btn" title="Copy text to clipboard">Copy</button>
+              <button class="btn btn-outline-xs" id="writing-download-btn" title="Download text as .txt">Download TXT</button>
+              <button class="btn btn-primary-sm" id="writing-save-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                Save Draft
+              </button>
+            </div>
+          </div>
+
+          <!-- Main Textarea -->
+          <textarea id="writing-editor-textarea" class="writing-editor-textarea" placeholder="Begin writing your composition here. The real-time assistant will monitor spelling, sentence formation, punctuation, and readability..."></textarea>
+
+          <!-- Counters Bar -->
+          <div class="editor-counters-bar">
+            <div class="counter-items-group">
+              <span class="counter-item"><strong id="wc-words">0</strong> words</span>
+              <span class="counter-item"><strong id="wc-chars">0</strong> characters</span>
+              <span class="counter-item"><strong id="wc-paras">0</strong> paragraphs</span>
+              <span class="counter-item"><strong id="wc-readtime">0 min</strong> read</span>
+            </div>
+            <span class="text-xs text-muted">Rule-Based Assistant Active</span>
+          </div>
+        </div>
+
+        <!-- Sidebar: Assistant & History -->
+        <aside class="writing-sidebar">
+          <!-- Real-Time Writing Assistant Card -->
+          <div class="writing-feedback-card">
+            <div class="sidebar-card-header">
+              <h4>Writing Assistant</h4>
+              <span class="badge badge-accent-sm">Heuristic Analyzer</span>
+            </div>
+            <div id="writing-feedback-container">
+              <div class="feedback-empty-state">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A0AEC0" stroke-width="1.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                <p>Start writing to see live spelling, grammar pattern alerts, punctuation checks, and readability metrics.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Format Tips Card -->
+          <div class="writing-tips-card">
+            <div class="sidebar-card-header">
+              <h4>Format Tips & Standards</h4>
+            </div>
+            <ul class="writing-tips-list" id="writing-tips-list">
+              <!-- Populated dynamically -->
+            </ul>
+          </div>
+
+          <!-- Saved Drafts Card -->
+          <div class="writing-drafts-card">
+            <div class="sidebar-card-header">
+              <h4>Saved Drafts</h4>
+            </div>
+            <div class="saved-drafts-list" id="writing-saved-drafts-list">
+              <!-- Drafts populated from storage -->
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW F: SPEECH CORNER (CO5)                -->
+    <!-- ========================================== -->
+    <section id="view-speech" class="view-section hidden-view">
+      <div class="speech-page-header">
+        <div class="container">
+          <div class="badge-row" style="margin-bottom: 0.5rem;">
+            <span class="badge badge-navy">Course Outcome CO5</span>
+            <span class="badge badge-accent">Speech Preparation & Delivery</span>
+          </div>
+          <h1 style="font-size: 2.25rem;">Speech Corner</h1>
+          <p class="text-muted">Prepare a polished, articulate English speech on ANY topic with rhetorical structure, delivery pauses, and speech playback rehearsal.</p>
+        </div>
+      </div>
+
+      <!-- Speech Generator Form -->
+      <div class="container speech-generator-section">
+        <div class="speech-generator-card">
+          <h2 class="speech-form-heading">What Would You Like to Speak About?</h2>
+          <p class="speech-form-sub">Enter any topic—academic, social, technological, or personal. Our rhetorical engine will craft an organized speech tailored to your preferences.</p>
+
+          <!-- Large Topic Text Input -->
+          <div class="speech-topic-input-wrap">
+            <input type="text" id="speech-topic-input" class="speech-topic-textarea" placeholder="Type ANY speech topic (e.g., Artificial Intelligence, Importance of Education, Climate Change...)" autocomplete="off">
+          </div>
+
+          <!-- Quick Topic Suggestions -->
+          <div class="topic-suggestions-row">
+            <span class="topic-chip-label">Trending Topics:</span>
+            <button class="topic-chip" data-topic="Artificial Intelligence">Artificial Intelligence</button>
+            <button class="topic-chip" data-topic="Importance of Education">Importance of Education</button>
+            <button class="topic-chip" data-topic="Climate Change">Climate Change</button>
+            <button class="topic-chip" data-topic="Social Media and Youth">Social Media</button>
+            <button class="topic-chip" data-topic="Women Empowerment">Women Empowerment</button>
+            <button class="topic-chip" data-topic="Technology in Modern Society">Technology in Modern Society</button>
+          </div>
+
+          <!-- Customization Selectors -->
+          <div class="speech-customizers-grid">
+            <!-- Duration -->
+            <div class="customizer-box">
+              <label class="customizer-label" for="speech-duration-select">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Speech Duration
+              </label>
+              <select id="speech-duration-select" class="customizer-select">
+                <option value="1">1 Minute (~130 words)</option>
+                <option value="2" selected>2 Minutes (~260 words)</option>
+                <option value="3">3 Minutes (~400 words)</option>
+                <option value="5">5 Minutes (~650 words)</option>
+              </select>
+              <span class="customizer-hint">Standard pacing: 120-140 words/min</span>
+            </div>
+
+            <!-- Language Level -->
+            <div class="customizer-box">
+              <label class="customizer-label" for="speech-level-select">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                Language Level
+              </label>
+              <select id="speech-level-select" class="customizer-select">
+                <option value="beginner">Beginner (Clear & Direct)</option>
+                <option value="intermediate" selected>Intermediate (Structured & Articulate)</option>
+                <option value="advanced">Advanced (Nuanced & Rhetorical)</option>
+              </select>
+              <span class="customizer-hint">Adapts vocabulary & sentence structures</span>
+            </div>
+
+            <!-- Speech Style -->
+            <div class="customizer-box">
+              <label class="customizer-label" for="speech-style-select">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                Speech Style
+              </label>
+              <select id="speech-style-select" class="customizer-select">
+                <option value="informative" selected>Informative (Objective & Educational)</option>
+                <option value="persuasive">Persuasive (Compelling & Convincing)</option>
+                <option value="motivational">Motivational (Inspiring & Empowering)</option>
+              </select>
+              <span class="customizer-hint">Defines tone, rhetorical hooks & conclusion</span>
+            </div>
+          </div>
+
+          <!-- Submit Button Row -->
+          <div class="speech-generate-btn-row">
+            <span class="speech-engine-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Lexicon Rhetorical Synthesis Engine • Instant Custom Generation
+            </span>
+            <button class="btn btn-primary" id="prepare-speech-btn" style="font-size: 1.05rem; padding: 0.85rem 2rem;">
+              Prepare My Speech
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Generated Speech Display Container -->
+        <div class="generated-speech-container hidden" id="generated-speech-container">
+          <div class="speech-result-top-bar">
+            <div>
+              <h3 class="speech-result-title" id="speech-result-title">Prepared Speech</h3>
+              <div class="speech-result-meta-row" id="speech-result-meta">
+                <!-- Badges -->
+              </div>
+            </div>
+            <div class="speech-action-buttons-group">
+              <button class="btn btn-outline-sm" id="speech-copy-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Speech
+              </button>
+              <button class="btn btn-outline-sm" id="speech-download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download TXT
+              </button>
+              <button class="btn btn-outline-sm" id="speech-regen-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                Regenerate
+              </button>
+            </div>
+          </div>
+
+          <!-- Audio Speech Player Bar -->
+          <div class="speech-audio-bar">
+            <div class="audio-controls-left">
+              <button class="btn btn-primary-sm" id="speech-audio-play-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                Listen to Speech
+              </button>
+              <button class="btn btn-outline-sm" id="speech-audio-stop-btn">Stop</button>
+            </div>
+            <div class="audio-controls-right">
+              <div class="speech-speed-selector">
+                <span>Speed:</span>
+                <select id="speech-speed-select" class="speed-select">
+                  <option value="0.8">0.8x (Rehearsal)</option>
+                  <option value="1.0" selected>1.0x (Standard)</option>
+                  <option value="1.2">1.2x (Brisk)</option>
+                </select>
+              </div>
+              <label class="cues-toggle-label">
+                <input type="checkbox" id="speech-cues-toggle" checked>
+                <span>Show Delivery Cues [Pause / Tone]</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Speech Section Navigation Tabs -->
+          <div class="speech-section-nav">
+            <button class="speech-section-tab active" data-section="full">Full Speech</button>
+            <button class="speech-section-tab" data-section="intro">Section 1: Introduction</button>
+            <button class="speech-section-tab" data-section="body">Section 2: Main Body</button>
+            <button class="speech-section-tab" data-section="conclusion">Section 3: Conclusion</button>
+          </div>
+
+          <!-- Speech Content View -->
+          <div id="speech-result-content">
+            <!-- Rendered by speech.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Speech Delivery Tips -->
+      <div class="container speech-tips-section">
+        <div class="section-header-centered">
+          <span class="section-subtitle-tag">Oratorical Excellence</span>
+          <h2 class="section-main-heading">Speech Delivery Tips</h2>
+          <p class="section-lead-text">Practical techniques from professional public speaking coaches to enhance your vocal modulation, eye contact, and physical presence.</p>
+        </div>
+        <div class="speech-delivery-tips-grid" id="speech-delivery-tips-grid">
+          <!-- Populated by speech.js -->
+        </div>
+      </div>
+
+      <!-- Speech Organization Guide -->
+      <div class="speech-guide-section">
+        <div class="container" id="speech-guide-content">
+          <!-- Populated by speech.js -->
+        </div>
+      </div>
+
+      <!-- Speech History Section -->
+      <div class="container speech-history-section">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h3 style="font-size: 1.35rem; color: var(--color-primary);">Previously Prepared Speeches</h3>
+            <p class="text-sm text-muted">Click any speech in your history to reload and practice.</p>
+          </div>
+        </div>
+        <div class="speech-history-grid" id="speech-history-list">
+          <!-- Populated from storage -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW G: STUDENT DASHBOARD                  -->
+    <!-- ========================================== -->
+    <section id="view-dashboard" class="view-section hidden-view">
+      <div class="dash-page-header">
+        <div class="container">
+          <div class="badge-row" style="margin-bottom: 0.5rem;">
+            <span class="badge badge-navy">Student Analytics</span>
+            <span class="badge badge-accent">Real-Time Activity Tracking</span>
+          </div>
+          <h1 style="font-size: 2.25rem;">Learning Progress Dashboard</h1>
+          <p class="text-muted">Review your verified learning accomplishments, quiz accuracy, reading summaries, writing drafts, and speeches prepared.</p>
+
+          <!-- Welcome Banner Card -->
+          <div class="dash-welcome-card">
+            <div class="dash-welcome-text">
+              <h2>
+                Welcome back, <span id="dash-student-name">Student Scholar</span>!
+                <button class="dash-edit-name-btn" id="dash-edit-name-btn" title="Edit your name">Edit Name</button>
+              </h2>
+              <p>Your interactive English learning portfolio is actively tracking real learning milestones.</p>
+              <div class="dash-date-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span id="dash-current-date">Today</span>
+              </div>
+            </div>
+
+            <div class="dash-overall-stat-col">
+              <span class="dash-overall-label">Overall Progress</span>
+              <div class="dash-overall-percent" id="dash-overall-percent">0%</div>
+              <div class="dash-progress-track">
+                <div class="dash-progress-bar-fill" id="dash-overall-bar" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 Key Metrics Grid -->
+      <div class="container dash-metrics-section">
+        <div class="dash-metrics-grid">
+          <!-- Metric 1: Grammar Lessons -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-grammar-lessons">0/7</div>
+              <div class="dash-metric-label">Grammar Lessons</div>
+              <div class="dash-metric-sub">Chapters Reviewed</div>
+            </div>
+          </div>
+
+          <!-- Metric 2: Grammar Accuracy -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-grammar-accuracy">0%</div>
+              <div class="dash-metric-label">Quiz Accuracy</div>
+              <div class="dash-metric-sub">Average Score</div>
+            </div>
+          </div>
+
+          <!-- Metric 3: Sentence Corrections -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-corrections">0/15</div>
+              <div class="dash-metric-label">Sentences Corrected</div>
+              <div class="dash-metric-sub">Syntax Challenges</div>
+            </div>
+          </div>
+
+          <!-- Metric 4: Vocab Words Mastered -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-vocab-mastered">0</div>
+              <div class="dash-metric-label">Words Bookmarked</div>
+              <div class="dash-metric-sub">Lexicon Bank</div>
+            </div>
+          </div>
+
+          <!-- Metric 5: Reading Passages Completed -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-reading-passages">0/5</div>
+              <div class="dash-metric-label">Passages Read</div>
+              <div class="dash-metric-sub">Comprehension Checked</div>
+            </div>
+          </div>
+
+          <!-- Metric 6: Summaries Submitted -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-summaries-submitted">0</div>
+              <div class="dash-metric-label">Summaries Evaluated</div>
+              <div class="dash-metric-sub">CO4 Fulfillments</div>
+            </div>
+          </div>
+
+          <!-- Metric 7: Words Written -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-writing-words">0</div>
+              <div class="dash-metric-label">Total Words Written</div>
+              <div class="dash-metric-sub">Studio Compositions</div>
+            </div>
+          </div>
+
+          <!-- Metric 8: Speeches Prepared -->
+          <div class="dash-metric-card">
+            <div class="dash-metric-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+            </div>
+            <div>
+              <div class="dash-metric-val" id="metric-speeches-prepared">0</div>
+              <div class="dash-metric-label">Speeches Prepared</div>
+              <div class="dash-metric-sub">CO5 Fulfillments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Outcomes Alignment Progress Breakdown -->
+      <div class="container dash-co-section">
+        <h3 style="font-size: 1.5rem; color: var(--color-primary);">Course Outcomes Milestone Progress</h3>
+        <p class="text-sm text-muted">Accreditation progress calculated directly from student activities.</p>
+
+        <div class="dash-co-grid">
+          <!-- CO1 Milestone -->
+          <div class="dash-co-card">
+            <div class="dash-co-header">
+              <span class="badge badge-navy">Course Outcome 1</span>
+              <h4 class="dash-co-title">CO1: English Grammar & Sentence Formation</h4>
+            </div>
+            <p class="dash-co-desc">Demonstrated through grammar lesson quizzes, sentence correction accuracy, vocabulary mastery, and writing studio compositions.</p>
+            <div class="dash-co-progress-row">
+              <span>Proficiency:</span>
+              <span id="co1-progress-percent">0%</span>
+            </div>
+            <div class="dash-co-bar-track">
+              <div class="dash-co-bar-fill co1" id="co1-progress-bar" style="width: 0%;"></div>
+            </div>
+            <a href="#grammar" class="btn btn-outline-sm" data-nav="grammar">Practice Grammar & Writing →</a>
+          </div>
+
+          <!-- CO4 Milestone -->
+          <div class="dash-co-card">
+            <div class="dash-co-header">
+              <span class="badge badge-navy">Course Outcome 4</span>
+              <h4 class="dash-co-title">CO4: Summarizing Information</h4>
+            </div>
+            <p class="dash-co-desc">Demonstrated through reading comprehension exercises, passage synthesis, and structured summary writing evaluations.</p>
+            <div class="dash-co-progress-row">
+              <span>Proficiency:</span>
+              <span id="co4-progress-percent">0%</span>
+            </div>
+            <div class="dash-co-bar-track">
+              <div class="dash-co-bar-fill co4" id="co4-progress-bar" style="width: 0%;"></div>
+            </div>
+            <a href="#reading" class="btn btn-outline-sm" data-nav="reading">Practice Summarizing →</a>
+          </div>
+
+          <!-- CO5 Milestone -->
+          <div class="dash-co-card">
+            <div class="dash-co-header">
+              <span class="badge badge-navy">Course Outcome 5</span>
+              <h4 class="dash-co-title">CO5: Speech Delivery</h4>
+            </div>
+            <p class="dash-co-desc">Demonstrated through custom speech synthesis, rhetorical structuring (hook, thesis, call to action), pause annotations, and oral delivery rehearsal.</p>
+            <div class="dash-co-progress-row">
+              <span>Proficiency:</span>
+              <span id="co5-progress-percent">0%</span>
+            </div>
+            <div class="dash-co-bar-track">
+              <div class="dash-co-bar-fill co5" id="co5-progress-bar" style="width: 0%;"></div>
+            </div>
+            <a href="#speech" class="btn btn-outline-sm" data-nav="speech">Prepare Speeches →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Timeline & Quick Launch -->
+      <div class="container dash-activity-section">
+        <div class="dash-activity-layout">
+          <!-- Chronological Activity Timeline -->
+          <div class="dash-timeline-card">
+            <h4 style="font-size: 1.25rem; color: var(--color-primary);">Recent Learning Activity</h4>
+            <div class="timeline-items-list" id="dash-activity-log-list">
+              <!-- Filled from storage -->
+            </div>
+          </div>
+
+          <!-- Quick Launch & Settings -->
+          <div class="dash-actions-card">
+            <h4 style="font-size: 1.15rem; color: var(--color-primary);">Quick Actions</h4>
+            <div class="quick-links-group">
+              <a href="#grammar" class="quick-link-btn" data-nav="grammar">
+                <span>Grammar Studio</span>
+                <span>→</span>
+              </a>
+              <a href="#vocabulary" class="quick-link-btn" data-nav="vocabulary">
+                <span>Word Explorer</span>
+                <span>→</span>
+              </a>
+              <a href="#reading" class="quick-link-btn" data-nav="reading">
+                <span>Reading Hub</span>
+                <span>→</span>
+              </a>
+              <a href="#writing" class="quick-link-btn" data-nav="writing">
+                <span>Writing Studio</span>
+                <span>→</span>
+              </a>
+              <a href="#speech" class="quick-link-btn" data-nav="speech">
+                <span>Speech Corner</span>
+                <span>→</span>
+              </a>
+            </div>
+
+            <!-- Danger Zone / Clean Reset -->
+            <div class="danger-zone-box">
+              <h5>Reset Activity Data</h5>
+              <p>Clear all locally stored quiz scores, corrections, drafts, and speeches to demonstrate a fresh start.</p>
+              <button class="btn btn-outline-sm" id="dash-reset-progress-btn" style="color: var(--color-error); border-color: #FEB2B2;">
+                Reset Learning Progress
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- COURSE OUTCOMES MODAL                      -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="co-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="co-modal-close" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="co-modal-header">
+        <span class="badge badge-accent">Course Outcome Alignment Matrix</span>
+        <h3 style="font-size: 1.6rem; color: var(--color-primary); margin-top: 0.5rem;">LEXICON LAB Academic Mapping</h3>
+        <p class="text-sm text-muted">How this educational platform demonstrates institutional learning outcomes.</p>
+      </div>
+
+      <div class="co-cards-list">
+        <div class="co-card-item">
+          <h4>
+            <span class="badge badge-navy">CO1</span>
+            English Grammar and Sentence Formation
+          </h4>
+          <p><strong>Fulfillment Method:</strong> Demonstrated through the Grammar Studio's seven core chapters, 15 interactive sentence correction challenges with rule-based verification, vocabulary expansion, and the Writing Studio's heuristic syntax engine.</p>
+          <div class="co-modules-tag-list">
+            <span class="badge badge-outline-sm">Grammar Studio</span>
+            <span class="badge badge-outline-sm">Word Explorer</span>
+            <span class="badge badge-outline-sm">Writing Studio</span>
+          </div>
+        </div>
+
+        <div class="co-card-item">
+          <h4>
+            <span class="badge badge-navy">CO4</span>
+            Summarizing Information
+          </h4>
+          <p><strong>Fulfillment Method:</strong> Demonstrated through the Reading Hub's 5 original multi-paragraph reading texts, passage comprehension validation, and the dedicated Summary Writing activity with side-by-side comparison against accredited model summaries.</p>
+          <div class="co-modules-tag-list">
+            <span class="badge badge-outline-sm">Reading Hub</span>
+            <span class="badge badge-outline-sm">Summary Writing Activity</span>
+            <span class="badge badge-outline-sm">Thematic Rubric Check</span>
+          </div>
+        </div>
+
+        <div class="co-card-item">
+          <h4>
+            <span class="badge badge-navy">CO5</span>
+            Speech Delivery
+          </h4>
+          <p><strong>Fulfillment Method:</strong> Demonstrated through the Speech Corner's synthesis engine that converts ANY student topic into a three-part speech (Introduction, Main Body, Conclusion), vocal pause markers, Web Speech playback rehearsal, and public speaking delivery tips.</p>
+          <div class="co-modules-tag-list">
+            <span class="badge badge-outline-sm">Speech Corner</span>
+            <span class="badge badge-outline-sm">Rhetorical Synthesis Engine</span>
+            <span class="badge badge-outline-sm">Speech Delivery Guidance</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.5rem; text-align: right;">
+        <button class="btn btn-primary-sm" onclick="document.getElementById('co-modal').classList.remove('open')">Close Alignment Matrix</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- ========================================== -->
+  <!-- SITE FOOTER                                -->
+  <!-- ========================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="#home" class="footer-brand-logo" data-nav="home">
+            <div class="brand-emblem" style="background-color: #FFFFFF; color: var(--color-primary);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="brand-text-col">
+              <span class="brand-title">LEXICON LAB</span>
+              <span class="brand-tagline">Learn. Explore. Express.</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            A premium, fully interactive English learning & communication platform engineered for practical language fluency, sentence mastery, critical summarization, and confident public speaking.
+          </p>
+          <div class="footer-co-badge-row">
+            <span class="badge badge-accent-sm">CO1 Grammar</span>
+            <span class="badge badge-accent-sm">CO4 Summarizing</span>
+            <span class="badge badge-accent-sm">CO5 Speech</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Learning Studios -->
+        <div>
+          <h4 class="footer-col-title">Learning Studios</h4>
+          <ul class="footer-links-list">
+            <li><a href="#grammar" data-nav="grammar">Grammar Studio</a></li>
+            <li><a href="#vocabulary" data-nav="vocabulary">Word Explorer</a></li>
+            <li><a href="#reading" data-nav="reading">Reading Hub</a></li>
+            <li><a href="#writing" data-nav="writing">Writing Studio</a></li>
+            <li><a href="#speech" data-nav="speech">Speech Corner</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Student Tools -->
+        <div>
+          <h4 class="footer-col-title">Student Tools</h4>
+          <ul class="footer-links-list">
+            <li><a href="#dashboard" data-nav="dashboard">Student Dashboard</a></li>
+            <li><a href="#grammar" data-nav="grammar">Sentence Correction</a></li>
+            <li><a href="#vocabulary" data-nav="vocabulary">Idioms & Phrases</a></li>
+            <li><a href="#speech" data-nav="speech">Speech Rehearsal Player</a></li>
+            <li><a href="#" class="open-co-modal-btn">Course Outcome Mapping</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Academic Note -->
+        <div>
+          <div class="footer-outcome-box">
+            <h5>EdTech Capstone Project</h5>
+            <p>Developed with pure modern web standards. Features zero fake metrics, privacy-first local persistence, genuine rule-based heuristic grammar checks, and algorithmic speech synthesis.</p>
+            <span class="text-xs" style="color: #9FB3C8;">Deep Navy (#102A43) • White (#FFFFFF) • Light Blue (#DCEAF7)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-row">
+        <span>&copy; 2026 LEXICON LAB. All rights reserved. Built for institutional English language excellence.</span>
+        <span>Tagline: <strong>Learn. Explore. Express.</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- 1. Data Layer -->
+  <script src="js/data/grammar-data.js"></script>
+  <script src="js/data/vocabulary-data.js"></script>
+  <script src="js/data/reading-data.js"></script>
+  <script src="js/data/writing-data.js"></script>
+
+  <!-- 2. Core Engines & Storage -->
+  <script src="js/storage.js"></script>
+  <script src="js/speech-engine.js"></script>
+
+  <!-- 3. Feature Modules -->
+  <script src="js/modules/grammar.js"></script>
+  <script src="js/modules/vocabulary.js"></script>
+  <script src="js/modules/reading.js"></script>
+  <script src="js/modules/writing.js"></script>
+  <script src="js/modules/speech.js"></script>
+  <script src="js/modules/dashboard.js"></script>
+
+  <!-- 4. Orchestration & App Lifecycle -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
+

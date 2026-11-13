@@ -1,0 +1,424 @@
+/**
+ * LEXICON LAB - Word Explorer Styles
+ * Aligned with Course Outcome CO1: English grammar and sentence formation
+ */
+
+.vocab-page-header {
+  padding: 3rem 0 2rem;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Word of the Day Showcase Card */
+.wod-section {
+  padding: 2.5rem 0;
+}
+
+.wod-card {
+  background: linear-gradient(135deg, #102A43 0%, #1E3A5F 100%);
+  color: #FFFFFF;
+  border-radius: var(--border-radius-xl);
+  padding: 2.5rem 3rem;
+  box-shadow: 0 12px 36px rgba(16, 42, 67, 0.16);
+  position: relative;
+  overflow: hidden;
+}
+
+.wod-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(220, 234, 247, 0.08);
+}
+
+.wod-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.wod-label-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.wod-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wod-main-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.wod-word-heading {
+  font-size: 3rem;
+  font-weight: 850;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+.wod-phonetic {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--color-accent);
+}
+
+.wod-audio-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.wod-audio-btn:hover {
+  background: #FFFFFF;
+  color: var(--color-primary);
+  transform: scale(1.08);
+}
+
+.wod-definition {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #E2E8F0;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.wod-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.wod-detail-col h5 {
+  font-size: 0.85rem;
+  color: #9FB3C8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tag-synonym {
+  background-color: rgba(220, 234, 247, 0.2);
+  color: #DCEAF7;
+  border: 1px solid rgba(220, 234, 247, 0.4);
+}
+.tag-synonym:hover {
+  background-color: #DCEAF7;
+  color: var(--color-primary);
+}
+
+.tag-antonym {
+  background-color: rgba(254, 178, 178, 0.15);
+  color: #FEB2B2;
+  border: 1px solid rgba(254, 178, 178, 0.3);
+}
+.tag-antonym:hover {
+  background-color: #FEB2B2;
+  color: #742A2A;
+}
+
+.tag-sm {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-body);
+  border: 1px solid #CBD5E1;
+}
+
+.wod-example-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-accent);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #F7FAFC;
+  margin-bottom: 1.25rem;
+}
+
+.wod-footer-notes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #9FB3C8;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Dictionary Search Bar */
+.vocab-search-section {
+  padding: 2rem 0;
+}
+
+.vocab-controls-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-lg);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+}
+
+.search-input-wrap {
+  flex-grow: 1;
+  position: relative;
+  min-width: 280px;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+}
+
+.search-text-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--border-radius-md);
+  outline: none;
+}
+.search-text-input:focus {
+  border-color: var(--color-interactive);
+}
+
+.vocab-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-select {
+  padding: 0.7rem 1.25rem;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--border-radius-md);
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Words Grid */
+.vocab-words-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.vocab-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+.vocab-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #CBD5E1;
+}
+
+.vocab-card.card-mastered {
+  border-left: 4px solid var(--color-interactive);
+}
+
+.vocab-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.vocab-card-word-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vocab-card-word {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+}
+
+.vocab-card-speak-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+.vocab-card-speak-btn:hover {
+  color: var(--color-interactive);
+}
+
+.vocab-card-phonetic {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.vocab-card-def {
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.vocab-card-synonyms {
+  margin-bottom: 0.75rem;
+}
+
+.vocab-card-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.vocab-card-example {
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.vocab-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #F0F4F8;
+  padding-top: 0.85rem;
+  margin-top: auto;
+}
+
+.vocab-card-category-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* Idioms Grid */
+.idioms-section {
+  padding: 4rem 0;
+  border-top: 1px solid #E2E8F0;
+}
+
+.idioms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.idiom-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.idiom-card-header {
+  margin-bottom: 0.75rem;
+}
+
+.idiom-phrase {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-top: 0.35rem;
+}
+
+.idiom-meaning {
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+}
+
+.idiom-origin {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.idiom-example {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  background-color: var(--color-accent-subtle);
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .wod-card {
+    padding: 1.75rem;
+  }
+  .wod-details-grid {
+    grid-template-columns: 1fr;
+  }
+  .wod-word-heading {
+    font-size: 2.25rem;
+  }
+}
+
